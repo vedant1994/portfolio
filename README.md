@@ -22,15 +22,15 @@ Welcome to the personal portfolio website of **Vedant Rathavi**. This repository
 
 ```text
 Portfolio/
-├── .env                          # API keys & local secrets (Git-ignored)
-├── .env.example                  # Shared template for environment variables
-├── .gitignore                    # Global git ignore configuration
 ├── README.md                     # Project documentation
 ├── index.html                    # Standalone static site entrypoint
 ├── css/                          # CSS stylesheet (design system, dark/light themes)
 ├── js/                           # JavaScript controllers & project data repository
 ├── assets/images/                # Profile picture & project screenshots
 └── portfolio/                    # Full Django Web Application
+    ├── .env                      # Django API secrets (Git-ignored)
+    ├── .env.example              # Template for Django environment variables
+    ├── .gitignore                # Django git ignore rules
     ├── manage.py                 # Django CLI management entrypoint
     ├── requirements.txt          # Production dependencies (gunicorn, whitenoise)
     ├── vercel.json               # 1-Click Vercel deployment configuration
@@ -61,11 +61,11 @@ Portfolio/
    ```
 
 2. **Set Up Environment Variables**:
-   Copy `.env.example` to `.env` in the root directory:
+   Copy `.env.example` to `.env` in both root and `portfolio/` directory:
    ```bash
-   cp .env.example .env
+   cp portfolio/.env.example portfolio/.env
    ```
-   *Fill in your secret key in `.env`:*
+   *Fill in your secret keys in `portfolio/.env`:*
    ```env
    WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
    DEBUG=True
@@ -87,52 +87,6 @@ Portfolio/
    ```
 
 4. Open your browser and navigate to `http://127.0.0.1:8000/`.
-
----
-
-## 🛠️ How to Add New Projects
-
-Adding a new project case study takes 10 seconds:
-
-1. Open [`portfolio/information/static/js/projects.js`](file:///c:/Users/BAPS/OneDrive/Portfolio/portfolio/information/static/js/projects.js) (or `js/projects.js`).
-2. Add a new project object to `projectsData`:
-   ```javascript
-   {
-     id: "my-new-project",
-     title: "My New AI App",
-     badge: "Full-Stack",
-     tagline: "Short 1-line description of what the project does.",
-     image: "assets/images/my_project_preview.jpg",
-     githubUrl: "https://github.com/vedant1994/my-new-project",
-     liveUrl: "https://my-app.vercel.app",
-     tools: ["Python", "Django", "TypeScript", "Vercel"],
-     whatIBuilt: "Detailed 1-line summary of what was built.",
-     lessonsLearned: [
-       "Real technical lesson 1.",
-       "Real technical lesson 2.",
-       "Real technical lesson 3."
-     ],
-     nextImprovements: "Feature planned for the next sprint.",
-     category: "Web App"
-   }
-   ```
-3. Refresh the page—your new case-study card will render automatically!
-
----
-
-## ☁️ Production Deployment
-
-### Option 1: Vercel (Recommended 1-Click)
-1. Push code to GitHub.
-2. Go to [Vercel.com](https://vercel.com) and import the repository `portfolio`.
-3. Set root directory to `portfolio`.
-4. Add Environment Variable: `WEB3FORMS_ACCESS_KEY` = `your_key`.
-5. Click **Deploy**.
-
-### Option 2: Render / Railway
-1. Create a new Web Service pointing to your repository.
-2. Build command: `pip install -r requirements.txt`
-3. Start command: `gunicorn portfolio.wsgi:application`
 
 ---
 
