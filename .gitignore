@@ -28,3 +28,6 @@ Thumbs.db
 .netlify
 dist/
 build/
+staticfiles/
+portfolio/staticfiles/
+
