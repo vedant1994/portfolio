@@ -31,9 +31,6 @@ Portfolio/
 ├── js/                           # JavaScript controllers & project data repository
 ├── assets/images/                # Profile picture & project screenshots
 └── portfolio/                    # Full Django Web Application
-    ├── .env                      # Django API secrets (Git-ignored)
-    ├── .env.example              # Template for Django environment variables
-    ├── .gitignore                # Django git ignore rules
     ├── manage.py                 # Django CLI management entrypoint
     ├── requirements.txt          # Production dependencies (gunicorn, whitenoise)
     ├── vercel.json               # 1-Click Vercel deployment configuration
@@ -64,11 +61,11 @@ Portfolio/
    ```
 
 2. **Set Up Environment Variables**:
-   Copy `.env.example` to `.env` in both root and `portfolio/` directory:
+   Copy `.env.example` to `.env` in the root directory:
    ```bash
-   cp portfolio/.env.example portfolio/.env
+   cp .env.example .env
    ```
-   *Fill in your secret keys in `portfolio/.env`:*
+   *Fill in your secret key in `.env`:*
    ```env
    WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
    DEBUG=True
