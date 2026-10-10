@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.env
+
+# Database (keep local SQLite3 out of git repository)
+*.sqlite3
+db.sqlite3
+
+# Logs & Databases
+*.log
+
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Build & Deployment Artifacts
+.vercel
+.netlify
+dist/
+build/
