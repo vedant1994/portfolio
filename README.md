@@ -57,7 +57,11 @@ Portfolio/
         │       └── wholesaler_erp.jpg
         └── templates/
             ├── index.html        # Primary Django HTML template
+<<<<<<< HEAD
             └── dashboard.html    # Additional template entrypoint
+=======
+            └── dashboard.html    # Additional template 
+>>>>>>> e44ac9a01257ab4833d197b5890ec1857ff82a15
 ```
 
 ---
@@ -66,11 +70,28 @@ Portfolio/
 
 Secret keys and API tokens are managed via the root [`.env`](file:///c:/Users/BAPS/OneDrive/Portfolio/.env) file:
 
+<<<<<<< HEAD
 1. Copy `.env.example` to `.env`:
+=======
+### Installation
+
+1. **Clone the Repository**:
    ```bash
-   cp .env.example .env
+   git clone https://github.com/vedant1994/portfolio.git
+   cd portfolio
    ```
+
+2. **Set Up Environment Variables**:
+   Copy `.env.example` to `.env` in both root and `portfolio/` directory:
+>>>>>>> e44ac9a01257ab4833d197b5890ec1857ff82a15
+   ```bash
+   cp portfolio/.env.example portfolio/.env
+   ```
+<<<<<<< HEAD
 2. Configure your keys inside `.env`:
+=======
+   *Fill in your secret keys in `portfolio/.env`:*
+>>>>>>> e44ac9a01257ab4833d197b5890ec1857ff82a15
    ```env
    # Environment Variables & API Keys
    WEB3FORMS_ACCESS_KEY=your_web3forms_access_key_here
@@ -82,6 +103,7 @@ Secret keys and API tokens are managed via the root [`.env`](file:///c:/Users/BA
 
 ---
 
+<<<<<<< HEAD
 ## 💻 Local Setup & Development Instructions
 
 ### Option A: Running as a Django Web Application
@@ -156,6 +178,8 @@ To add or update project case studies:
 
 ---
 
+=======
+>>>>>>> e44ac9a01257ab4833d197b5890ec1857ff82a15
 ## 📬 Contact & Links
 
 * **Developer**: Vedant Rathavi
