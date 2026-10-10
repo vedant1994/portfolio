@@ -22,26 +22,42 @@ Welcome to the personal portfolio website of **Vedant Rathavi**. This repository
 
 ```text
 Portfolio/
-├── README.md                     # Project documentation
-├── index.html                    # Standalone static site entrypoint
-├── css/                          # CSS stylesheet (design system, dark/light themes)
-├── js/                           # JavaScript controllers & project data repository
-├── assets/images/                # Profile picture & project screenshots
-└── portfolio/                    # Full Django Web Application
-    ├── .env                      # Django API secrets (Git-ignored)
-    ├── .env.example              # Template for Django environment variables
-    ├── .gitignore                # Django git ignore rules
-    ├── manage.py                 # Django CLI management entrypoint
-    ├── requirements.txt          # Production dependencies (gunicorn, whitenoise)
-    ├── vercel.json               # 1-Click Vercel deployment configuration
-    ├── portfolio/                # Core Django configuration (settings.py, urls.py, wsgi.py)
-    └── information/              # Information App
-        ├── urls.py               # Route handlers
-        ├── views.py              # Ingests .env secrets & renders index.html
-        ├── static/               # Django static assets (css, js, images)
+├── .env                          # Master environment variables & API keys (Git-ignored)
+├── .env.example                  # Template for environment variables
+├── .gitignore                    # Master git ignore file (Python, Django, secrets, cache)
+├── README.md                     # Comprehensive project documentation
+├── index.html                    # Root static HTML site entrypoint
+├── css/
+│   └── styles.css                # Master CSS stylesheet (design system, clamp typography, themes)
+├── js/
+│   ├── main.js                   # UI controllers (theme switcher, mobile nav, Web3Forms fetch)
+│   └── projects.js               # Data-driven project repository array
+├── assets/
+│   └── images/
+│       ├── profile_pic.jpeg      # Developer avatar picture
+        └── wholesaler_erp.jpg    # Wholesaler ERP case-study preview
+└── portfolio/                    # Full Django Web Application Subdirectory
+    ├── manage.py                 # Django management CLI script
+    ├── requirements.txt          # Django dependencies (Django, Gunicorn, Whitenoise)
+    ├── vercel.json               # Vercel deployment configuration
+    ├── portfolio/                # Django project settings & routing
+    │   ├── settings.py           # Core Django settings
+    │   ├── urls.py               # Root URL router
+    │   ├── wsgi.py               # WSGI entrypoint for production server
+    │   └── asgi.py               # ASGI entrypoint
+    └── information/              # Primary Django Application
+        ├── urls.py               # Application URL routes
+        ├── views.py              # Ingests root .env secrets & renders index.html
+        ├── static/               # Django static files
+        │   ├── css/styles.css
+        │   ├── js/main.js
+        │   ├── js/projects.js
+        │   └── images/
+        │       ├── profile_pic.jpeg
+        │       └── wholesaler_erp.jpg
         └── templates/
-            ├── index.html        # Main Django template
-            └── dashboard.html    # Legacy template alias
+            ├── index.html        # Primary Django HTML template
+            └── dashboard.html    # Additional template 
 ```
 
 ---
