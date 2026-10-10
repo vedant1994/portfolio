@@ -70,8 +70,7 @@ Portfolio/
    ```
    *Fill in your secret keys in `portfolio/.env`:*
    ```env
-   WEB3FORMS_ACCESS_KEY=6e71c9fd-819b-4b24-8358-b480e72e6481
-   DJANGO_SECRET_KEY=your_django_secret_key
+   WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
    DEBUG=True
    ```
 
