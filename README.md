@@ -1,138 +1,158 @@
-# ⚡ Vedant Rathavi — Personal Portfolio & Product Showcase
+# ⚡ Vedant Rathavi — Personal Portfolio & Case Study Showcase
 
 > **"I learn deeply from every project I build. I take ideas from zero to a live deployed product using AI with deep conceptual understanding."**
 
-Welcome to the personal portfolio website of **Vedant Rathavi**. This repository contains a full-stack, data-driven portfolio designed, engineered, and deployed using Django, HTML5, Vanilla CSS3, ES6 JavaScript, and Web3Forms.
+This repository contains the personal portfolio website of **Vedant Rathavi**. It features a production-ready, data-driven architecture built with **Django**, **HTML5**, **Vanilla CSS3**, **ES6 JavaScript**, and **Web3Forms**.
 
 ---
 
-## 🌟 Key Highlights & Architecture
+## 🚀 Key Features
 
-* **💡 Idea → Live Product Focus**: Every section showcases practical execution, real technical lessons learned, and zero-fluff capabilities.
-* **📦 Featured Case Study — [Wholesaler ERP System](https://github.com/vedant1994/wholesaler-erp)**: An end-to-end Enterprise Resource Planning platform built with Django & Python, featuring transactional SQL schemas, RBAC security, and automated financial reporting.
-* **🚀 Data-Driven Case Studies**: Project cards are dynamically populated via `js/projects.js` for effortless project additions.
-* **🌓 Dual Theme System**: Automatic system preference detection (`prefers-color-scheme`) with smooth manual light/dark mode persistence via `localStorage`.
-* **✉️ Direct Web3Forms AJAX Contact Form**: Built-in AJAX fetch integration submitting messages directly to `vedantrathavi2006@gmail.com` with real-time user feedback.
-* **🎨 Modern Responsive Typography**: Custom font system (`Space Grotesk`, `Inter`, `JetBrains Mono`) with fluid CSS `clamp()` scaling and WCAG AA accessibility contrast.
-* **☁️ Cloud & Production Ready**: Pre-configured with `requirements.txt` and `vercel.json` for 1-click cloud deployment on Vercel, Render, Railway, or Netlify.
+* **💡 Idea → Live Product Mindset**: Designed to showcase real-world execution, technical lessons learned, and proof of capabilities without buzzword fluff.
+* **📦 Featured Case Study — [Wholesaler ERP System](https://github.com/vedant1994/wholesaler-erp)**: End-to-end Enterprise Resource Planning platform for wholesale inventory & financial workflow tracking, built with Python & Django.
+* **📊 Data-Driven Project Management**: All project cards are populated dynamically via [`js/projects.js`](file:///c:/Users/BAPS/OneDrive/Portfolio/js/projects.js), making it simple to add or update case studies.
+* **🌓 Automatic & Manual Dark/Light Mode**: Detects system preferences (`prefers-color-scheme`) with a toggle switch that persists user settings in `localStorage`.
+* **✉️ Web3Forms AJAX Contact System**: Direct contact form integration sending messages straight to `vedantrathavi2006@gmail.com` with real-time submission feedback.
+* **🎨 Modern Responsive Typography**: Uses `Space Grotesk` (Headings), `Inter` (Body), and `JetBrains Mono` (Code & Accents) with fluid `clamp()` type scaling and WCAG AA contrast compliance.
+* **☁️ Multi-Platform Deployment Ready**: Deployable as either a Django Web App (on Vercel/Render/Railway) or a Static Site (on GitHub Pages/Netlify).
 
 ---
 
-## 📁 Repository Directory Structure
+## 📁 Accurate Project Directory Structure
 
 ```text
 Portfolio/
-├── .env                          # API keys & local secrets (Git-ignored)
-├── .env.example                  # Shared template for environment variables
-├── .gitignore                    # Global git ignore configuration
-├── README.md                     # Project documentation
-├── index.html                    # Standalone static site entrypoint
-├── css/                          # CSS stylesheet (design system, dark/light themes)
-├── js/                           # JavaScript controllers & project data repository
-├── assets/images/                # Profile picture & project screenshots
-└── portfolio/                    # Full Django Web Application
-    ├── manage.py                 # Django CLI management entrypoint
-    ├── requirements.txt          # Production dependencies (gunicorn, whitenoise)
-    ├── vercel.json               # 1-Click Vercel deployment configuration
-    ├── portfolio/                # Core Django configuration (settings.py, urls.py, wsgi.py)
-    └── information/              # Information App
-        ├── urls.py               # Route handlers
-        ├── views.py              # Ingests .env secrets & renders index.html
-        ├── static/               # Django static assets (css, js, images)
+├── .env                          # Master environment variables & API keys (Git-ignored)
+├── .env.example                  # Template for environment variables
+├── .gitignore                    # Master git ignore file (Python, Django, secrets, cache)
+├── README.md                     # Comprehensive project documentation
+├── index.html                    # Root static HTML site entrypoint
+├── css/
+│   └── styles.css                # Master CSS stylesheet (design system, clamp typography, themes)
+├── js/
+│   ├── main.js                   # UI controllers (theme switcher, mobile nav, Web3Forms fetch)
+│   └── projects.js               # Data-driven project repository array
+├── assets/
+│   └── images/
+│       ├── profile_pic.jpeg      # Developer avatar picture
+        └── wholesaler_erp.jpg    # Wholesaler ERP case-study preview
+└── portfolio/                    # Full Django Web Application Subdirectory
+    ├── manage.py                 # Django management CLI script
+    ├── requirements.txt          # Django dependencies (Django, Gunicorn, Whitenoise)
+    ├── vercel.json               # Vercel deployment configuration
+    ├── portfolio/                # Django project settings & routing
+    │   ├── settings.py           # Core Django settings
+    │   ├── urls.py               # Root URL router
+    │   ├── wsgi.py               # WSGI entrypoint for production server
+    │   └── asgi.py               # ASGI entrypoint
+    └── information/              # Primary Django Application
+        ├── urls.py               # Application URL routes
+        ├── views.py              # Ingests root .env secrets & renders index.html
+        ├── static/               # Django static files
+        │   ├── css/styles.css
+        │   ├── js/main.js
+        │   ├── js/projects.js
+        │   └── images/
+        │       ├── profile_pic.jpeg
+        │       └── wholesaler_erp.jpg
         └── templates/
-            ├── index.html        # Main Django template
-            └── dashboard.html    # Legacy template alias
+            ├── index.html        # Primary Django HTML template
+            └── dashboard.html    # Additional template entrypoint
 ```
 
 ---
 
-## 🚀 Quickstart & Local Setup
+## ⚙️ Environment Configuration
 
-### Prerequisites
-* **Python 3.10+**
-* **Git**
+Secret keys and API tokens are managed via the root [`.env`](file:///c:/Users/BAPS/OneDrive/Portfolio/.env) file:
 
-### Installation
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/vedant1994/portfolio.git
-   cd portfolio
-   ```
-
-2. **Set Up Environment Variables**:
-   Copy `.env.example` to `.env` in the root directory:
+1. Copy `.env.example` to `.env`:
    ```bash
    cp .env.example .env
    ```
-   *Fill in your secret key in `.env`:*
+2. Configure your keys inside `.env`:
    ```env
-   WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
+   # Environment Variables & API Keys
+   WEB3FORMS_ACCESS_KEY=your_web3forms_access_key_here
+   DJANGO_SECRET_KEY=your_django_secret_key_here
    DEBUG=True
    ```
 
-3. **Set Up Virtual Environment & Run Django**:
-   ```bash
-   # Navigate to the Django project folder
-   cd portfolio
-
-   # Create and activate virtual environment
-   python -m venv venv
-   source venv/bin/activate    # On macOS/Linux
-   .\venv\Scripts\activate     # On Windows
-
-   # Run system check & start development server
-   python manage.py check
-   python manage.py runserver
-   ```
-
-4. Open your browser and navigate to `http://127.0.0.1:8000/`.
+> **Note**: The `.env` file is git-ignored to keep private API credentials safe.
 
 ---
 
-## 🛠️ How to Add New Projects
+## 💻 Local Setup & Development Instructions
 
-Adding a new project case study takes 10 seconds:
+### Option A: Running as a Django Web Application
 
-1. Open [`portfolio/information/static/js/projects.js`](file:///c:/Users/BAPS/OneDrive/Portfolio/portfolio/information/static/js/projects.js) (or `js/projects.js`).
-2. Add a new project object to `projectsData`:
+1. **Clone & Navigate**:
+   ```bash
+   git clone https://github.com/vedant1994/portfolio.git
+   cd portfolio/portfolio
+   ```
+
+2. **Create & Activate Virtual Environment**:
+   ```bash
+   # Windows (PowerShell)
+   python -m venv venv
+   .\venv\Scripts\activate
+
+   # macOS / Linux
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. **Install Dependencies & Check System**:
+   ```bash
+   pip install -r requirements.txt
+   python manage.py check
+   ```
+
+4. **Start Django Server**:
+   ```bash
+   python manage.py runserver
+   ```
+   Open `http://127.0.0.1:8000/` in your browser.
+
+---
+
+### Option B: Running as a Standalone Static Site
+
+Simply open [`index.html`](file:///c:/Users/BAPS/OneDrive/Portfolio/index.html) directly in any modern web browser or serve it using a lightweight local web server:
+```bash
+npx serve .
+```
+
+---
+
+## 🛠️ Adding New Projects
+
+To add or update project case studies:
+
+1. Open [`js/projects.js`](file:///c:/Users/BAPS/OneDrive/Portfolio/js/projects.js) (and [`portfolio/information/static/js/projects.js`](file:///c:/Users/BAPS/OneDrive/Portfolio/portfolio/information/static/js/projects.js)).
+2. Add a project entry to `projectsData`:
    ```javascript
    {
-     id: "my-new-project",
-     title: "My New AI App",
+     id: "my-project-id",
+     title: "Project Title",
      badge: "Full-Stack",
      tagline: "Short 1-line description of what the project does.",
      image: "assets/images/my_project_preview.jpg",
-     githubUrl: "https://github.com/vedant1994/my-new-project",
-     liveUrl: "https://my-app.vercel.app",
-     tools: ["Python", "Django", "TypeScript", "Vercel"],
-     whatIBuilt: "Detailed 1-line summary of what was built.",
+     githubUrl: "https://github.com/vedant1994/my-repo",
+     liveUrl: "https://my-live-project.com",
+     tools: ["Python / Django", "JavaScript", "PostgreSQL"],
+     whatIBuilt: "Summary of what was built.",
      lessonsLearned: [
-       "Real technical lesson 1.",
-       "Real technical lesson 2.",
-       "Real technical lesson 3."
+       "Real lesson 1.",
+       "Real lesson 2.",
+       "Real lesson 3."
      ],
-     nextImprovements: "Feature planned for the next sprint.",
-     category: "Web App"
+     nextImprovements: "Planned future enhancements.",
+     category: "Full-Stack"
    }
    ```
-3. Refresh the page—your new case-study card will render automatically!
-
----
-
-## ☁️ Production Deployment
-
-### Option 1: Vercel (Recommended 1-Click)
-1. Push code to GitHub.
-2. Go to [Vercel.com](https://vercel.com) and import the repository `portfolio`.
-3. Set root directory to `portfolio`.
-4. Add Environment Variable: `WEB3FORMS_ACCESS_KEY` = `your_key`.
-5. Click **Deploy**.
-
-### Option 2: Render / Railway
-1. Create a new Web Service pointing to your repository.
-2. Build command: `pip install -r requirements.txt`
-3. Start command: `gunicorn portfolio.wsgi:application`
+3. The portfolio will immediately render the updated project card.
 
 ---
 
