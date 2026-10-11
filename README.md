@@ -26,19 +26,10 @@ Portfolio/
 ├── .env.example                  # Template for environment variables
 ├── .gitignore                    # Master git ignore file (Python, Django, secrets, cache)
 ├── README.md                     # Comprehensive project documentation
-├── index.html                    # Root static HTML site entrypoint
-├── css/
-│   └── styles.css                # Master CSS stylesheet (design system, clamp typography, themes)
-├── js/
-│   ├── main.js                   # UI controllers (theme switcher, mobile nav, Web3Forms fetch)
-│   └── projects.js               # Data-driven project repository array
-├── assets/
-│   └── images/
-│       ├── profile_pic.jpeg      # Developer avatar picture
-        └── wholesaler_erp.jpg    # Wholesaler ERP case-study preview
 └── portfolio/                    # Full Django Web Application Subdirectory
     ├── manage.py                 # Django management CLI script
     ├── requirements.txt          # Django dependencies (Django, Gunicorn, Whitenoise)
+    ├── vercel.json               # Cloud deployment configuration
     ├── portfolio/                # Django project settings & routing
     │   ├── settings.py           # Core Django settings
     │   ├── urls.py               # Root URL router
@@ -48,15 +39,13 @@ Portfolio/
         ├── urls.py               # Application URL routes
         ├── views.py              # Ingests root .env secrets & renders index.html
         ├── static/               # Django static files
-        │   ├── css/styles.css
-        │   ├── js/main.js
-        │   ├── js/projects.js
-        │   └── images/
-        │       ├── profile_pic.jpeg
-        │       └── wholesaler_erp.jpg
+        │   ├── css/styles.css    # Design system, light/dark themes, clamp typography
+        │   ├── js/main.js        # Theme manager, mobile navigation, Web3Forms AJAX
+        │   ├── js/projects.js    # Data-driven project repository array
+        │   ├── docs/             # Downloadable documents     (vedant_Rathavi_portfolio.pdf)
+        │   └── images/           # Profile and project screenshots
         └── templates/
-            ├── index.html        # Primary Django HTML template
-            └── dashboard.html    # Additional template 
+            └── index.html        # Primary Django portfolio template
 ```
 
 ---
